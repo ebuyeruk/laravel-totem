@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/codestudiohq/laravel-totem/blob/8.0/resources/assets/img/totem.png?raw=true" alt="Laravel Totem"/>
+  <img src="https://github.com/ebuyeruk/laravel-totem/blob/11.0/resources/assets/img/totem.png?raw=true" alt="Laravel Totem"/>
 </p>
 <p align="center">
 <img src="https://github.com/codestudiohq/laravel-totem/workflows/Laravel/badge.svg?branch=8.0" alt="Build Status">
@@ -7,8 +7,6 @@
 </p>
 
 # Introduction
-
-[![Join the chat at https://gitter.im/laravel-totem/Lobby](https://badges.gitter.im/laravel-totem/Lobby.svg)](https://gitter.im/laravel-totem/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Manage your `Laravel Schedule` from a pretty dashboard. Schedule your `Laravel Console Commands` to your liking. Enable/Disable scheduled tasks on the fly without going back to your code again.
 
