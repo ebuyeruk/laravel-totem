@@ -7,7 +7,7 @@ use Studio\Totem\Tests\TestCase;
 class CreateTaskTest extends TestCase
 {
     /** @test */
-    public function user_can_view_create_task_form()
+    public function test_user_can_view_create_task_form()
     {
         $this->disableExceptionHandling()->signIn();
 
@@ -17,7 +17,7 @@ class CreateTaskTest extends TestCase
     }
 
     /** @test */
-    public function guest_can_not_view_create_task_form()
+    public function test_guest_can_not_view_create_task_form()
     {
         $response = $this->get(route('totem.task.create'));
 
@@ -25,7 +25,7 @@ class CreateTaskTest extends TestCase
     }
 
     /** @test */
-    public function user_can_create_task_with_cron_expression()
+    public function test_user_can_create_task_with_cron_expression()
     {
         $this->disableExceptionHandling()->signIn();
 
@@ -40,7 +40,7 @@ class CreateTaskTest extends TestCase
     }
 
     /** @test */
-    public function user_can_create_task_with_frequencies()
+    public function test_user_can_create_task_with_frequencies()
     {
         $this->disableExceptionHandling()->signIn();
 

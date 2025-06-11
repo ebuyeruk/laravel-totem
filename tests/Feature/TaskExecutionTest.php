@@ -14,7 +14,7 @@ use Studio\Totem\Tests\TestCase;
 class TaskExecutionTest extends TestCase
 {
     /** @test */
-    public function it_runs_a_scheduled_task()
+    public function test_it_runs_a_scheduled_task()
     {
         $task = Task::factory()->create();
 
@@ -37,7 +37,7 @@ class TaskExecutionTest extends TestCase
     }
 
     /** @test */
-    public function it_executes_a_scheduled_task()
+    public function test_it_executes_a_scheduled_task()
     {
         $task = Task::factory()->create();
 
