@@ -8,7 +8,7 @@ use Studio\Totem\Tests\TestCase;
 class ViewTaskTest extends TestCase
 {
     /** @test */
-    public function user_can_view_task()
+    public function test_user_can_view_task()
     {
         $this->signIn();
         $task = Task::factory()->create();
@@ -20,7 +20,7 @@ class ViewTaskTest extends TestCase
     }
 
     /** @test */
-    public function guest_can_not_view_task()
+    public function test_guest_can_not_view_task()
     {
         $task = Task::factory()->create();
         $response = $this->get(route('totem.task.view', $task));
