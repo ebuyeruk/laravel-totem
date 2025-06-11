@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ebuyeruk/laravel-totem/blob/11.x/resources/assets/img/totem.png?raw=true" alt="Laravel Totem"/>
+  [![Laravel](https://github.com/ebuyeruk/laravel-totem/actions/workflows/laravel.yml/badge.svg)](https://github.com/ebuyeruk/laravel-totem/actions/workflows/laravel.yml)
 </p>
 <p align="center">
 <img src="https://github.com/ebuyeruk/laravel-totem/workflows/Laravel/badge.svg?branch=11.0" alt="Build Status">
