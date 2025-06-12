@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers;
+namespace Ebuyer\Totem\Http\Controllers;
 
-use Studio\Totem\Contracts\TaskInterface;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Task;
 
 class ExecuteTasksController extends Controller
 {

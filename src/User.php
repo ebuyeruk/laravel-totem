@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem;
+namespace Ebuyer\Totem;
 
 use Database\Factories\TotemUserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

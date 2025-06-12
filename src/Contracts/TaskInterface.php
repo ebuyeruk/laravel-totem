@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio\Totem\Contracts;
+namespace Ebuyer\Totem\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Task;
 
 interface TaskInterface
 {

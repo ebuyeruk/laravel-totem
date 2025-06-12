@@ -1,11 +1,11 @@
 <?php
 
-namespace Studio\Totem\Traits;
+namespace Ebuyer\Totem\Traits;
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Arr;
-use Studio\Totem\Parameter;
+use Ebuyer\Totem\Parameter;
 
 trait HasParameters
 {

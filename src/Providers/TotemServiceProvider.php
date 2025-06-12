@@ -1,15 +1,15 @@
 <?php
 
-namespace Studio\Totem\Providers;
+namespace Ebuyer\Totem\Providers;
 
 use Cron\CronExpression;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
-use Studio\Totem\Console\Commands\ListSchedule;
-use Studio\Totem\Console\Commands\PublishAssets;
-use Studio\Totem\Contracts\TaskInterface;
-use Studio\Totem\Repositories\EloquentTaskRepository;
+use Ebuyer\Totem\Console\Commands\ListSchedule;
+use Ebuyer\Totem\Console\Commands\PublishAssets;
+use Ebuyer\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Repositories\EloquentTaskRepository;
 
 class TotemServiceProvider extends ServiceProvider
 {

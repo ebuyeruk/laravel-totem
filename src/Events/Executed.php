@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem\Events;
+namespace Ebuyer\Totem\Events;
 
-use Studio\Totem\Notifications\TaskCompleted;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Notifications\TaskCompleted;
+use Ebuyer\Totem\Task;
 
 class Executed extends BroadcastingEvent
 {

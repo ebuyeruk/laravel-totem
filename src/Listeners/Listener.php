@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio\Totem\Listeners;
+namespace Ebuyer\Totem\Listeners;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Studio\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Contracts\TaskInterface;
 
 class Listener implements ShouldQueue
 {

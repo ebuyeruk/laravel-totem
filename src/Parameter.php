@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem;
+namespace Ebuyer\Totem;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 

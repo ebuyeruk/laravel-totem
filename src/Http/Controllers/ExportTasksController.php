@@ -1,8 +1,8 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers;
+namespace Ebuyer\Totem\Http\Controllers;
 
-use Studio\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Contracts\TaskInterface;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class ExportTasksController extends Controller

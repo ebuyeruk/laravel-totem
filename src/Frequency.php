@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem;
+namespace Ebuyer\Totem;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Studio\Totem\Traits\HasParameters;
+use Ebuyer\Totem\Traits\HasParameters;
 
 class Frequency extends TotemModel
 {

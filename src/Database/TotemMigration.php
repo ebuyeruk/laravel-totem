@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Database;
+namespace Ebuyer\Totem\Database;
 
 use Illuminate\Database\Migrations\Migration;
 

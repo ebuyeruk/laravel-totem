@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem\Events;
+namespace Ebuyer\Totem\Events;
 
 use Illuminate\Broadcasting\PrivateChannel;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Task;
 
 class Updating extends BroadcastingEvent
 {

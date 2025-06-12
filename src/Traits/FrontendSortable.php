@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Traits;
+namespace Ebuyer\Totem\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers;
+namespace Ebuyer\Totem\Http\Controllers;
 
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
-use Studio\Totem\Contracts\TaskInterface;
-use Studio\Totem\Http\Requests\TaskRequest;
-use Studio\Totem\Task;
-use Studio\Totem\Totem;
+use Ebuyer\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Http\Requests\TaskRequest;
+use Ebuyer\Totem\Task;
+use Ebuyer\Totem\Totem;
 
 class TasksController extends Controller
 {
