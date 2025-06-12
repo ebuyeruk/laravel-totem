@@ -12,7 +12,21 @@
   "authors": [
     {
       "name": "Roshan Gautam",
-      "email": "roshan.gautam@hotmail.com"
+      "email": "roshan.gautam@hotmail.com",
+      "homepage": "https://twitter.com/@roshangautam",
+      "role": "Original Developer"
+    },
+    {
+      "name": "Ebuyer UK Ltd",
+      "email": "oss@ebuyer.com",
+      "homepage": "https://www.ebuyer.com",
+      "role": "Current Maintainer"
+    },
+    {
+      "name": "Chris Cutts",
+      "email": "chris.cutts@ebuyer.com",
+      "homepage": "https://github.com/Chris-Cutts",
+      "role": "Lead Developer"
     }
   ],
   "require": {
