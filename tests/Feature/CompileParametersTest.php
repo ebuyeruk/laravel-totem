@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
-use Studio\Totem\Task;
-use Studio\Totem\Tests\TestCase;
+use Ebuyer\Totem\Task;
+use Ebuyer\Totem\Tests\TestCase;
 
 class CompileParametersTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers;
+namespace Ebuyer\Totem\Http\Controllers;
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use Studio\Totem\Contracts\TaskInterface;
-use Studio\Totem\Http\Requests\ImportRequest;
+use Ebuyer\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Http\Requests\ImportRequest;
 
 class ImportTasksController extends Controller
 {

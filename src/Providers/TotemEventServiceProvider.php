@@ -1,16 +1,16 @@
 <?php
 
-namespace Studio\Totem\Providers;
+namespace Ebuyer\Totem\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
 class TotemEventServiceProvider extends EventServiceProvider
 {
     protected $listen = [
-        'Studio\Totem\Events\Created' => ['Studio\Totem\Listeners\BustCache', 'Studio\Totem\Listeners\BuildCache'],
-        'Studio\Totem\Events\Updated' => ['Studio\Totem\Listeners\BustCache', 'Studio\Totem\Listeners\BuildCache'],
-        'Studio\Totem\Events\Activated' => ['Studio\Totem\Listeners\BustCache', 'Studio\Totem\Listeners\BuildCache'],
-        'Studio\Totem\Events\Deactivated' => ['Studio\Totem\Listeners\BustCache', 'Studio\Totem\Listeners\BuildCache'],
-        'Studio\Totem\Events\Deleting' => ['Studio\Totem\Listeners\BustCacheImmediately'],
+        'Ebuyer\Totem\Events\Created' => ['Ebuyer\Totem\Listeners\BustCache', 'Ebuyer\Totem\Listeners\BuildCache'],
+        'Ebuyer\Totem\Events\Updated' => ['Ebuyer\Totem\Listeners\BustCache', 'Ebuyer\Totem\Listeners\BuildCache'],
+        'Ebuyer\Totem\Events\Activated' => ['Ebuyer\Totem\Listeners\BustCache', 'Ebuyer\Totem\Listeners\BuildCache'],
+        'Ebuyer\Totem\Events\Deactivated' => ['Ebuyer\Totem\Listeners\BustCache', 'Ebuyer\Totem\Listeners\BuildCache'],
+        'Ebuyer\Totem\Events\Deleting' => ['Ebuyer\Totem\Listeners\BustCacheImmediately'],
     ];
 }

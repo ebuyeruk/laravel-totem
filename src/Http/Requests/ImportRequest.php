@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Http\Requests;
+namespace Ebuyer\Totem\Http\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;

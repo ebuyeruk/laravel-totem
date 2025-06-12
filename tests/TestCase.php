@@ -1,13 +1,13 @@
 <?php
 
-namespace Studio\Totem\Tests;
+namespace Ebuyer\Totem\Tests;
 
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Facades\Auth;
 use Orchestra\Testbench\Exceptions\Handler;
-use Studio\Totem\Providers\TotemServiceProvider;
-use Studio\Totem\Totem;
-use Studio\Totem\User;
+use Ebuyer\Totem\Providers\TotemServiceProvider;
+use Ebuyer\Totem\Totem;
+use Ebuyer\Totem\User;
 use Throwable;
 
 class TestCase extends \Orchestra\Testbench\TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Events;
+namespace Ebuyer\Totem\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;

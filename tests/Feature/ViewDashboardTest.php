@@ -1,11 +1,11 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Studio\Totem\Result;
-use Studio\Totem\Task;
-use Studio\Totem\Tests\TestCase;
+use Ebuyer\Totem\Result;
+use Ebuyer\Totem\Task;
+use Ebuyer\Totem\Tests\TestCase;
 
 class ViewDashboardTest extends TestCase
 {

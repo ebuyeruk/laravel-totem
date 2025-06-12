@@ -1,15 +1,15 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Event;
-use Studio\Totem\Events\Executed;
-use Studio\Totem\Events\Executing;
-use Studio\Totem\Providers\ConsoleServiceProvider;
-use Studio\Totem\Result;
-use Studio\Totem\Task;
-use Studio\Totem\Tests\TestCase;
+use Ebuyer\Totem\Events\Executed;
+use Ebuyer\Totem\Events\Executing;
+use Ebuyer\Totem\Providers\ConsoleServiceProvider;
+use Ebuyer\Totem\Result;
+use Ebuyer\Totem\Task;
+use Ebuyer\Totem\Tests\TestCase;
 
 class TaskExecutionTest extends TestCase
 {

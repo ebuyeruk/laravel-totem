@@ -1,13 +1,13 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Event;
-use Studio\Totem\Events\Created;
-use Studio\Totem\Events\Creating;
-use Studio\Totem\Task;
-use Studio\Totem\Tests\TestCase;
+use Ebuyer\Totem\Events\Created;
+use Ebuyer\Totem\Events\Creating;
+use Ebuyer\Totem\Task;
+use Ebuyer\Totem\Tests\TestCase;
 
 class ImportTasksTest extends TestCase
 {

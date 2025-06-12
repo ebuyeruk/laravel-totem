@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Studio\Totem\User;
+use Ebuyer\Totem\User;
 
 class TotemUserFactory extends Factory
 {

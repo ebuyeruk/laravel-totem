@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio\Totem\Events;
+namespace Ebuyer\Totem\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Task;
 
 class TaskEvent extends Event
 {

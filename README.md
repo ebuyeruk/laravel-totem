@@ -41,7 +41,7 @@ composer require ebuyeruk/laravel-totem
 Add `TotemServiceProvider` to the `providers` array of your Laravel v5.4 application's config/app.php
 
 ```php
-Studio\Totem\Providers\TotemServiceProvider::class,
+Ebuyer\Totem\Providers\TotemServiceProvider::class,
 ```
 
 Once `Laravel Totem` is installed & registered,
@@ -85,7 +85,7 @@ This package assumes that you have a good understanding of [Laravel's Task Sched
 `Laravel Totem`'s dashboard is inspired by `Laravel Horizon`. Just like Horizon you can configure authentication to `Totem`'s dashboard. Add the following to the boot method of your AppServiceProvider or wherever you might seem fit.
 
 ```php
-use Studio\Totem\Totem;
+use Ebuyer\Totem\Totem;
 
 Totem::auth(function($request) {
     // return true / false . For e.g.

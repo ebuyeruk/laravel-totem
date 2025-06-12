@@ -1,8 +1,8 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
-use Studio\Totem\Tests\TestCase;
+use Ebuyer\Totem\Tests\TestCase;
 
 class CreateTaskTest extends TestCase
 {
@@ -31,7 +31,7 @@ class CreateTaskTest extends TestCase
 
         $response = $this->post(route('totem.task.create'), [
             'description' => 'List All Scheduled Commands',
-            'command' => 'Studio\Totem\Console\Commands\ListSchedule',
+            'command' => 'Ebuyer\Totem\Console\Commands\ListSchedule',
             'type' => 'cron',
             'cron' => '* * * * *',
         ]);
@@ -46,7 +46,7 @@ class CreateTaskTest extends TestCase
 
         $response = $this->post(route('totem.task.create'), [
             'description' => 'List All Scheduled Commands',
-            'command' => 'Studio\Totem\Console\Commands\ListSchedule',
+            'command' => 'Ebuyer\Totem\Console\Commands\ListSchedule',
             'type' => 'frequency',
             'frequencies' => [
                 [

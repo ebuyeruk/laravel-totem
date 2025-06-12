@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers;
+namespace Ebuyer\Totem\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 

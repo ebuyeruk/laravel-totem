@@ -36,8 +36,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Studio\\Totem\\": "src/",
-      "Studio\\Totem\\Tests\\": "tests/",
+      "Ebuyer\\Totem\\": "src/",
+      "Ebuyer\\Totem\\Tests\\": "tests/",
       "Database\\Factories\\": "database/factories/"
     },
     "files": [
@@ -51,7 +51,7 @@
     },
     "laravel": {
       "providers": [
-        "Studio\\Totem\\Providers\\TotemServiceProvider"
+        "Ebuyer\\Totem\\Providers\\TotemServiceProvider"
       ]
     }
   },

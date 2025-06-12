@@ -1,24 +1,24 @@
 <?php
 
-namespace Studio\Totem\Repositories;
+namespace Ebuyer\Totem\Repositories;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
-use Studio\Totem\Contracts\TaskInterface;
-use Studio\Totem\Events\Activated;
-use Studio\Totem\Events\Created;
-use Studio\Totem\Events\Creating;
-use Studio\Totem\Events\Deactivated;
-use Studio\Totem\Events\Deleted;
-use Studio\Totem\Events\Deleting;
-use Studio\Totem\Events\Executed;
-use Studio\Totem\Events\Updated;
-use Studio\Totem\Events\Updating;
-use Studio\Totem\Result;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Contracts\TaskInterface;
+use Ebuyer\Totem\Events\Activated;
+use Ebuyer\Totem\Events\Created;
+use Ebuyer\Totem\Events\Creating;
+use Ebuyer\Totem\Events\Deactivated;
+use Ebuyer\Totem\Events\Deleted;
+use Ebuyer\Totem\Events\Deleting;
+use Ebuyer\Totem\Events\Executed;
+use Ebuyer\Totem\Events\Updated;
+use Ebuyer\Totem\Events\Updating;
+use Ebuyer\Totem\Result;
+use Ebuyer\Totem\Task;
 
 class EloquentTaskRepository implements TaskInterface
 {

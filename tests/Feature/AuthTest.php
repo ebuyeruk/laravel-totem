@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio\Totem\Tests\Feature;
+namespace Ebuyer\Totem\Tests\Feature;
 
-use Studio\Totem\Http\Middleware\Authenticate;
-use Studio\Totem\Tests\TestCase;
-use Studio\Totem\Totem;
+use Ebuyer\Totem\Http\Middleware\Authenticate;
+use Ebuyer\Totem\Tests\TestCase;
+use Ebuyer\Totem\Totem;
 
 class AuthTest extends TestCase
 {

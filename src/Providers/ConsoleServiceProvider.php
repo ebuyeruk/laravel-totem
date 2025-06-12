@@ -1,12 +1,12 @@
 <?php
 
-namespace Studio\Totem\Providers;
+namespace Ebuyer\Totem\Providers;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\ServiceProvider;
-use Studio\Totem\Events\Executed;
-use Studio\Totem\Events\Executing;
-use Studio\Totem\Totem;
+use Ebuyer\Totem\Events\Executed;
+use Ebuyer\Totem\Events\Executing;
+use Ebuyer\Totem\Totem;
 
 class ConsoleServiceProvider extends ServiceProvider
 {

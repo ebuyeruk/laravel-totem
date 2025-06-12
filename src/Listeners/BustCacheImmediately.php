@@ -1,9 +1,9 @@
 <?php
 
-namespace Studio\Totem\Listeners;
+namespace Ebuyer\Totem\Listeners;
 
 use Illuminate\Container\Container;
-use Studio\Totem\Events\Event;
+use Ebuyer\Totem\Events\Event;
 
 class BustCacheImmediately
 {

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "description": "Qui omnis consequuntur ullam impedit libero beatae.",
-    "command": "Studio\\Totem\\Console\\Commands\\ListSchedule",
+    "command": "Ebuyer\\Totem\\Console\\Commands\\ListSchedule",
     "parameters": null,
     "expression": "* * * * *",
     "timezone": "UTC",
@@ -26,7 +26,7 @@
   {
     "id": 2,
     "description": "Est vel consequatur est quis.",
-    "command": "Studio\\Totem\\Console\\Commands\\ListSchedule",
+    "command": "Ebuyer\\Totem\\Console\\Commands\\ListSchedule",
     "parameters": null,
     "expression": "* * * * *",
     "timezone": "UTC",
@@ -50,7 +50,7 @@
   {
     "id": 3,
     "description": "Quisquam quos exercitationem qui.",
-    "command": "Studio\\Totem\\Console\\Commands\\ListSchedule",
+    "command": "Ebuyer\\Totem\\Console\\Commands\\ListSchedule",
     "parameters": null,
     "expression": "* * * * *",
     "timezone": "UTC",
@@ -74,7 +74,7 @@
   {
     "id": 4,
     "description": "Non quos at dolore commodi et sunt.",
-    "command": "Studio\\Totem\\Console\\Commands\\ListSchedule",
+    "command": "Ebuyer\\Totem\\Console\\Commands\\ListSchedule",
     "parameters": null,
     "expression": "* * * * *",
     "timezone": "UTC",
@@ -98,7 +98,7 @@
   {
     "id": 5,
     "description": "Beatae et asperiores beatae similique laborum rerum.",
-    "command": "Studio\\Totem\\Console\\Commands\\ListSchedule",
+    "command": "Ebuyer\\Totem\\Console\\Commands\\ListSchedule",
     "parameters": null,
     "expression": "* * * * *",
     "timezone": "UTC",

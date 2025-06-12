@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Helpers;
+namespace Ebuyer\Totem\Helpers;
 
 use Illuminate\Support\HtmlString;
 

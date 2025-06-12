@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio\Totem\Console\Commands;
+namespace Ebuyer\Totem\Console\Commands;
 
 use Carbon\Carbon;
 use Cron\CronExpression;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Studio\Totem\Listeners;
+namespace Ebuyer\Totem\Listeners;
 
-use Studio\Totem\Events\Event;
+use Ebuyer\Totem\Events\Event;
 
 class BustCache extends Listener
 {

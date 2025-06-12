@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Studio\Totem\Task;
+use Ebuyer\Totem\Task;
 
 class TotemTaskFactory extends Factory
 {
@@ -13,7 +13,7 @@ class TotemTaskFactory extends Factory
     {
         return [
             'description' => $this->faker->sentence,
-            'command' => 'Studio\Totem\Console\Commands\ListSchedule',
+            'command' => 'Ebuyer\Totem\Console\Commands\ListSchedule',
             'expression' => '* * * * *',
         ];
     }
