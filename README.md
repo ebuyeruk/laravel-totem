@@ -184,8 +184,10 @@ Important versions listed below. Refer to the [Changelog](CHANGELOG.md) for a fu
 
 ## Credits
 
-- [Roshan Gautam](https://twitter.com/@roshangautam)
-- [OSS Contributors](https://github.com/codestudiohq/laravel-totem/graphs/contributors)
+- [Roshan Gautam](https://twitter.com/@roshangautam) - Original Author
+- [Ebuyer UK Ltd](https://www.ebuyer.com) - Current Maintainers
+- [Chris Cutts](https://github.com/chris-cutts) - Lead Developer
+- [OSS Contributors](https://github.com/ebuyeruk/laravel-totem/graphs/contributors)
 
 Bug reports, feature requests, and pull requests can be submitted by following our [Contribution Guide](CONTRIBUTING.md).
 
@@ -200,3 +202,4 @@ Bug reports, feature requests, and pull requests can be submitted by following o
 This software is released under the [MIT](LICENSE) License.
 
 © 2020 Roshan Gautam, All rights reserved.
+© 2025 Ebuyer UK Ltd, All rights reserved.

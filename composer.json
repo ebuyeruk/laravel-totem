@@ -5,14 +5,27 @@
     "laravel",
     "schedule",
     "manager",
-    "Code Studio",
     "totem"
   ],
   "license": "MIT",
   "authors": [
     {
       "name": "Roshan Gautam",
-      "email": "roshan.gautam@hotmail.com"
+      "email": "roshan.gautam@hotmail.com",
+      "homepage": "https://twitter.com/@roshangautam",
+      "role": "Original Developer"
+    },
+    {
+      "name": "Ebuyer UK Ltd",
+      "email": "customerservice@ebuyer.com",
+      "homepage": "https://www.ebuyer.com",
+      "role": "Current Maintainer"
+    },
+    {
+      "name": "Chris Cutts",
+      "email": "chris.cutts@ebuyer.com",
+      "homepage": "https://github.com/Chris-Cutts",
+      "role": "Lead Developer"
     }
   ],
   "require": {
