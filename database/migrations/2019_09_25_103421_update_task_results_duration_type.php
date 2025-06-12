@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Studio\Totem\Database\TotemMigration;
+use Ebuyer\Totem\Database\TotemMigration;
 
 class UpdateTaskResultsDurationType extends TotemMigration
 {
