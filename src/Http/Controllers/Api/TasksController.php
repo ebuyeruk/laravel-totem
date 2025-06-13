@@ -1,10 +1,11 @@
 <?php
 
-namespace Studio\Totem\Http\Controllers\Api;
+namespace Ebuyer\Totem\Http\Controllers\Api;
 
 use Dedoc\Scramble\Attributes\Group;
-use Studio\Totem\Http\Requests\TaskRequest;
-use Studio\Totem\Http\Requests\TaskUpdateRequest;
+use Ebuyer\Totem\Http\Requests\TaskRequest;
+use Ebuyer\Totem\Http\Requests\TaskUpdateRequest;
+use Ebuyer\Totem\Http\Resources\TaskResource;
 
 class TasksController
 {
@@ -15,9 +16,7 @@ class TasksController
      */
     public function index()
     {
-        return [
-            'tasks' => []
-        ];
+        return TaskResource::collection(app('totem.tasks')->findAllActive());
     }
 
     /**
@@ -27,9 +26,9 @@ class TasksController
      */
     public function show($task_id)
     {
-        return [
-            'task_id' => $task_id
-        ];
+        return TaskResource::make(
+            app('totem.tasks')->find($task_id)
+        );
     }
 
     public function update($task_id, TaskUpdateRequest $request)
