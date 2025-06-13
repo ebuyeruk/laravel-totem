@@ -13,7 +13,6 @@ use Ebuyer\Totem\Tests\TestCase;
 
 class TaskExecutionTest extends TestCase
 {
-    /** @test */
     public function test_it_runs_a_scheduled_task()
     {
         $task = Task::factory()->create();
@@ -36,7 +35,6 @@ class TaskExecutionTest extends TestCase
         Event::assertDispatched(Executed::class);
     }
 
-    /** @test */
     public function test_it_executes_a_scheduled_task()
     {
         $task = Task::factory()->create();

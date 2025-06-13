@@ -6,7 +6,6 @@ use Ebuyer\Totem\Tests\TestCase;
 
 class CreateTaskTest extends TestCase
 {
-    /** @test */
     public function test_user_can_view_create_task_form()
     {
         $this->disableExceptionHandling()->signIn();
@@ -16,7 +15,6 @@ class CreateTaskTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /** @test */
     public function test_guest_can_not_view_create_task_form()
     {
         $response = $this->get(route('totem.task.create'));
@@ -24,7 +22,6 @@ class CreateTaskTest extends TestCase
         $response->assertStatus(403);
     }
 
-    /** @test */
     public function test_user_can_create_task_with_cron_expression()
     {
         $this->disableExceptionHandling()->signIn();
@@ -39,7 +36,6 @@ class CreateTaskTest extends TestCase
         $response->assertRedirect(route('totem.tasks.all'));
     }
 
-    /** @test */
     public function test_user_can_create_task_with_frequencies()
     {
         $this->disableExceptionHandling()->signIn();
