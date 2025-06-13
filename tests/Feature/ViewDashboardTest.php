@@ -11,7 +11,6 @@ class ViewDashboardTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
     public function test_user_can_view_dashboard()
     {
         $this->signIn();
@@ -19,14 +18,12 @@ class ViewDashboardTest extends TestCase
         $response->assertStatus(302);
     }
 
-    /** @test */
     public function test_guest_can_not_view_dashboard()
     {
         $response = $this->get(route('totem.dashboard'));
         $response->assertStatus(403);
     }
 
-    /** @test */
     public function test_view_dashboard_single_task_no_results()
     {
         $this->signIn();
@@ -38,7 +35,6 @@ class ViewDashboardTest extends TestCase
         $response->assertSee($task->description);
     }
 
-    /** @test */
     public function test_view_dashboard_single_task_with_results()
     {
         $this->signIn();
@@ -51,7 +47,6 @@ class ViewDashboardTest extends TestCase
         $response->assertSee($tasks[0]->description);
     }
 
-    /** @test */
     public function test_view_dashboard_single_task_with_multiple_results()
     {
         $this->signIn();
@@ -64,7 +59,6 @@ class ViewDashboardTest extends TestCase
         $response->assertSee($tasks[0]->description);
     }
 
-    /** @test */
     public function test_view_dashboard_multiple_tasks_with_multiple_results()
     {
         $this->signIn();

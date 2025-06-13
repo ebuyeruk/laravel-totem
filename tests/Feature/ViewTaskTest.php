@@ -7,7 +7,6 @@ use Ebuyer\Totem\Tests\TestCase;
 
 class ViewTaskTest extends TestCase
 {
-    /** @test */
     public function test_user_can_view_task()
     {
         $this->signIn();
@@ -19,7 +18,6 @@ class ViewTaskTest extends TestCase
         $response->assertSee($task->expression);
     }
 
-    /** @test */
     public function test_guest_can_not_view_task()
     {
         $task = Task::factory()->create();
