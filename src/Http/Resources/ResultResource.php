@@ -11,13 +11,16 @@ class ResultResource extends JsonResource
 {
     protected bool $show_result = false;
 
-    public function toArray($request)
+    public function toArray(Request $request)
     {
         return [
             'id' => $this->id,
             'task_id' => $this->task_id,
             'ran_at' => $this->ran_at,
-            'result' => $this->when($this->show_result, fn() => $this->result),
+            'result' => $this->when(
+                $this->show_result || $request->input('show_result'),
+                fn() => $this->result
+            ),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'duration' => $this->duration

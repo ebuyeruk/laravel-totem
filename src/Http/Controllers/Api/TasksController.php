@@ -3,10 +3,10 @@
 namespace Ebuyer\Totem\Http\Controllers\Api;
 
 use Dedoc\Scramble\Attributes\Group;
-use Ebuyer\Totem\Http\Requests\TaskRequest;
 use Ebuyer\Totem\Http\Requests\TaskUpdateRequest;
 use Ebuyer\Totem\Http\Resources\TaskResource;
 
+#[Group('Totem Tasks')]
 class TasksController
 {
     /**
@@ -26,16 +26,24 @@ class TasksController
      */
     public function show($task_id)
     {
-        return TaskResource::make(
-            app('totem.tasks')->find($task_id)
-        );
+        $task = app('totem.tasks')->find($task_id);
+
+        abort_if(! $task, 404);
+
+        return TaskResource::make($task);
     }
 
+    /**
+     * Update task
+     *
+     * Update data on a task
+     */
     public function update($task_id, TaskUpdateRequest $request)
     {
-        return [
-            'task_id' => $task_id,
-            'is_active' => $request->validated('is_active'),
-        ];
+        $task = app('totem.tasks')->find($task_id);
+
+        abort_if(! $task, 404);
+
+        return TaskResource::make($task);
     }
 }

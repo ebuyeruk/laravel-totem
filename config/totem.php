@@ -221,6 +221,7 @@ return [
         'route_prefix' => env('TOTEM_WEB_ROUTE_PREFIX', 'totem'),
     ],
     'api' => [
+        'key' => '123',
         'middleware' => env('TOTEM_API_MIDDLEWARE', 'api'),
     ],
     'table_prefix' => env('TOTEM_TABLE_PREFIX', ''),
