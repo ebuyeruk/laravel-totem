@@ -11,7 +11,6 @@ use Ebuyer\Totem\Tests\TestCase;
 
 class ImportTasksTest extends TestCase
 {
-    /** @test */
     public function test_it_imports_tasks_from_a_json_file()
     {
         Event::fake();
