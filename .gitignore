@@ -7,3 +7,4 @@ _ide_helper.php
 .idea
 *.sketch
 .phpunit.result.cache
+.phpunit.cache
