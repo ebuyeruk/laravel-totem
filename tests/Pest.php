@@ -11,9 +11,11 @@
 |
 */
 
-pest()->extend(Ebuyer\Totem\Tests\TestCase::class)
- // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
-    ->in('Feature');
+if (function_exists('pest')) {
+    pest()->extend(Ebuyer\Totem\Tests\TestCase::class)
+        // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+        ->in('Feature');
+}
 
 /*
 |--------------------------------------------------------------------------
