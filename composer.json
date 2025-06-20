@@ -44,7 +44,8 @@
     "pestphp/pest": "^2.0|^3.0"
   },
   "suggest": {
-    "nexmo/client": "Required for sms notifications."
+    "nexmo/client": "Required for sms notifications.",
+    "dedoc/scramble": "Auto generate OpenAPI documentation"
   },
   "autoload": {
     "psr-4": {
