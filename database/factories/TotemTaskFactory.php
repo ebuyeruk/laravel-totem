@@ -12,7 +12,7 @@ class TotemTaskFactory extends Factory
     public function definition()
     {
         return [
-            'description' => $this->faker->sentence,
+            'description' => $this->faker->words(3, true),
             'command' => 'Ebuyer\Totem\Console\Commands\ListSchedule',
             'expression' => '* * * * *',
         ];
