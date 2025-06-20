@@ -3,12 +3,18 @@
 namespace Ebuyer\Totem\Http\Controllers\Api\Tasks;
 
 use Dedoc\Scramble\Attributes\Group;
+use Ebuyer\Totem\Contracts\TaskInterface;
 use Ebuyer\Totem\Http\Requests\TaskUpdateRequest;
 use Ebuyer\Totem\Http\Resources\TaskResource;
 
 #[Group('Totem Tasks')]
 class TasksController
 {
+    public function __construct(private TaskInterface $tasks)
+    {
+        //
+    }
+
     /**
      * List all tasks.
      *
@@ -16,7 +22,7 @@ class TasksController
      */
     public function index()
     {
-        return TaskResource::collection(app('totem.tasks')->findAllActive());
+        return TaskResource::collection($this->tasks->findAllActive());
     }
 
     /**
@@ -26,7 +32,7 @@ class TasksController
      */
     public function show($task_id)
     {
-        $task = app('totem.tasks')->find($task_id);
+        $task = $this->tasks->find($task_id);
 
         abort_if(! $task, 404);
 
@@ -40,9 +46,9 @@ class TasksController
      */
     public function update($task_id, TaskUpdateRequest $request)
     {
-        $task = app('totem.tasks')->find($task_id);
+        $task = $this->tasks->find($task_id);
 
-        abort_if(! $task, 404);
+        $task->update($request->validated());
 
         return TaskResource::make($task);
     }
