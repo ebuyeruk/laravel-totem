@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebuyer\Totem\Http\Controllers\Api;
+namespace Ebuyer\Totem\Http\Controllers\Api\Tasks;
 
 use Dedoc\Scramble\Attributes\Group;
 use Ebuyer\Totem\Http\Requests\TaskUpdateRequest;

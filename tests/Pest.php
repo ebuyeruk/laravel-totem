@@ -11,10 +11,15 @@
 |
 */
 
+use Ebuyer\Totem\Tests\TestCase;
+use Orchestra\Testbench\Pest\WithPest;
+
 if (function_exists('pest')) {
-    pest()->extend(Ebuyer\Totem\Tests\TestCase::class)
+    pest()->extend(TestCase::class)
         // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
         ->in('Feature');
+} else {
+    uses(TestCase::class)->in('Feature');
 }
 
 /*

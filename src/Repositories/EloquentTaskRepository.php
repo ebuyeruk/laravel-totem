@@ -4,6 +4,7 @@ namespace Ebuyer\Totem\Repositories;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
@@ -55,7 +56,7 @@ class EloquentTaskRepository implements TaskInterface
         }
 
         return Cache::rememberForever('totem.task.'.$id, function () use ($id) {
-            return Task::query()->with('frequencies')->find($id);
+            return Task::query()->with('frequencies')->findOrFail($id);
         });
     }
 
@@ -216,15 +217,14 @@ class EloquentTaskRepository implements TaskInterface
             ->each(function ($data) {
                 Cache::forget('totem.task.'.$data->id);
 
-                $task = $this->find($data->id);
-
-                if (is_null($task)) {
+                try {
+                    $this->update(
+                        (array) $data,
+                        $this->find($data->id)
+                    );
+                } catch (ModelNotFoundException $e) {
                     $this->store((array) $data);
-
-                    return;
                 }
-
-                $this->update((array) $data, $task);
             });
     }
 }
