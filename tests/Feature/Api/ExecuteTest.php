@@ -5,14 +5,6 @@ use Ebuyer\Totem\Task;
 
 use function Pest\Laravel\post;
 
-beforeEach(function () {
-    // Debug the Faker instance and its providers
-    $faker = app(Generator::class);
-    dump('Faker Providers:', array_map(fn($provider) => get_class($provider), $faker->getProviders()));
-    dump('Faker Locale:', $faker->locale);
-});
-
-
 it('runs a scheduled task', function () {
     $task = Task::factory()->create();
 

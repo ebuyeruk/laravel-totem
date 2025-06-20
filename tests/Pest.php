@@ -12,9 +12,10 @@
 */
 
 use Ebuyer\Totem\Tests\TestCase;
+use Orchestra\Testbench\Pest\WithPest;
 
 if (function_exists('pest')) {
-    pest()->extend(TestCase::class)
+    pest()->extend(TestCase::class, WithPest::class)
         // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
         ->in('Feature');
 }

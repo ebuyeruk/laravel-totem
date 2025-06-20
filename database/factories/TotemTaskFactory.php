@@ -11,9 +11,6 @@ class TotemTaskFactory extends Factory
 
     public function definition()
     {
-        dump('Factory Faker Instance:', get_class($this->faker));
-        dump('Factory Faker Providers:', array_map(fn($provider) => get_class($provider), $this->faker->getProviders()));
-
         return [
             'description' => $this->faker->sentence,
             'command' => 'Ebuyer\Totem\Console\Commands\ListSchedule',

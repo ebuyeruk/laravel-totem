@@ -2,7 +2,6 @@
 
 namespace Ebuyer\Totem\Tests\Feature;
 
-use Generator;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Event;
 use Ebuyer\Totem\Events\Executed;
@@ -14,16 +13,6 @@ use Ebuyer\Totem\Tests\TestCase;
 
 class TaskExecutionTest extends TestCase
 {
-    public function setUp(): void
-    {
-        // Debug the Faker instance and its providers
-        $faker = app(Generator::class);
-        dump('Faker Providers:', array_map(fn($provider) => get_class($provider), $faker->getProviders()));
-        dump('Faker Locale:', $faker->locale);
-
-        parent::setUp();
-    }
-
     public function test_it_runs_a_scheduled_task()
     {
         $task = Task::factory()->create();
