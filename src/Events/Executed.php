@@ -7,6 +7,9 @@ use Ebuyer\Totem\Task;
 
 class Executed extends BroadcastingEvent
 {
+    public float $start;
+    public string $output;
+
     /**
      * Executed constructor.
      *
@@ -18,12 +21,8 @@ class Executed extends BroadcastingEvent
     {
         parent::__construct($task);
 
-        $time_elapsed_secs = microtime(true) - $started;
-
-        $task->results()->create([
-            'duration' => $time_elapsed_secs * 1000,
-            'result' => $output,
-        ]);
+        $this->start = $started;
+        $this->output = $output;
 
         $task->notify(new TaskCompleted($output));
         $task->autoCleanup();

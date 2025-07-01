@@ -2,6 +2,7 @@
 
 namespace Ebuyer\Totem\Contracts;
 
+use Ebuyer\Totem\Http\Resources\ResultResource;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Ebuyer\Totem\Task;
