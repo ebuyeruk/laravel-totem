@@ -22,7 +22,7 @@ class TasksController
      */
     public function index()
     {
-        return TaskResource::collection($this->tasks->findAllActive());
+        return TaskResource::collection($this->tasks->findAll());
     }
 
     /**
@@ -48,8 +48,9 @@ class TasksController
     {
         $task = $this->tasks->find($task_id);
 
-        $task->update($request->validated());
-
-        return TaskResource::make($task);
+        return TaskResource::make($this->tasks->update(
+            $request->validated(),
+            $task
+        ));
     }
 }

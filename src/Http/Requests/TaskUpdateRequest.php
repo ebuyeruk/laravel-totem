@@ -2,6 +2,7 @@
 
 namespace Ebuyer\Totem\Http\Requests;
 
+use Ebuyer\Totem\CronExpressionRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class TaskUpdateRequest extends FormRequest
@@ -10,8 +11,8 @@ class TaskUpdateRequest extends FormRequest
     {
         return [
             'description' => ['sometimes', 'string'],
-            'parameters' => ['sometimes', 'string'],
-            'expression' => ['sometimes', 'cron_expression'],
+            'parameters' => ['sometimes', 'string', 'nullable'],
+            'expression' => ['sometimes', new CronExpressionRule()],
             'command' => ['sometimes', 'string'],
             'timezone' => ['sometimes', 'timezone'],
             'dont_overlap' => ['sometimes', 'boolean'],
