@@ -33,7 +33,7 @@ class TaskResource extends JsonResource
             'auto_cleanup_type' => $this->auto_cleanup_type,
             'is_active' => $this->activated,
             'next_run' => $this->upcoming,
-            'last_result' => $this->whenLoaded('results', fn() => $this->last_result->created_at),
+            'last_result' => $this->whenLoaded('results', fn() => $this->last_result?->created_at),
             'average_runtime' => $this->average_runtime,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

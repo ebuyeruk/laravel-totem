@@ -53,6 +53,14 @@ class Task extends TotemModel
         'average_runtime',
     ];
 
+    protected $casts = [
+        'is_active' => 'boolean',
+        'dont_overlap' => 'boolean',
+        'run_in_maintenance' => 'boolean',
+        'run_on_one_server' => 'boolean',
+        'run_in_background' => 'boolean',
+    ];
+
     /**
      * Activated Accessor.
      *
