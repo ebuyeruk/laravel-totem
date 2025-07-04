@@ -8,18 +8,16 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::connection(TOTEM_DATABASE_CONNECTION)
-            ->table(TOTEM_TABLE_PREFIX.'task_results', function (Blueprint $table) {
-                $table->string('status')
-                    ->nullable()
-                    ->after('output');
+            ->table(TOTEM_TABLE_PREFIX.'tasks', function (Blueprint $table) {
+                $table->string('name')->nullable()->after('id');
             });
     }
 
     public function down(): void
     {
         Schema::connection(TOTEM_DATABASE_CONNECTION)
-            ->table(TOTEM_TABLE_PREFIX.'task_results', function (Blueprint $table) {
-                $table->dropColumn('status');
+            ->table(TOTEM_TABLE_PREFIX.'tasks', function (Blueprint $table) {
+                $table->dropColumn('name');
             });
     }
 };

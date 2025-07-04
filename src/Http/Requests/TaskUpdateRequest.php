@@ -10,6 +10,7 @@ class TaskUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => ['sometimes', 'string'],
             'description' => ['sometimes', 'string'],
             'parameters' => ['sometimes', 'string', 'nullable'],
             'expression' => ['sometimes', new CronExpressionRule()],

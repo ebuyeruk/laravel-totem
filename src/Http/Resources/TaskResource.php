@@ -17,6 +17,7 @@ class TaskResource extends JsonResource
         $this->resource->load('results');
         return [
             'id' => $this->id,
+            'name' => $this->name,
             'description' => $this->description,
             'parameters' => $this->parameters,
             'expression' => $this->whenLoaded('frequencies', fn() => $this->getCronExpression()),

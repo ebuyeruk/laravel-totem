@@ -24,6 +24,7 @@ class Task extends TotemModel
      */
     protected $fillable = [
         'id',
+        'name',
         'description',
         'command',
         'parameters',
