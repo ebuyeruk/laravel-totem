@@ -3,6 +3,8 @@
 namespace Ebuyer\Totem\Jobs;
 
 use Ebuyer\Totem\Console\DatabaseOutput;
+use Ebuyer\Totem\Events\Executed;
+use Ebuyer\Totem\Events\Executing;
 use Ebuyer\Totem\Result;
 use Ebuyer\Totem\ResultStatus;
 use Ebuyer\Totem\Task;
@@ -50,6 +52,7 @@ class ExecuteTaskJob implements ShouldQueue
         $start = microtime(true);
 
         try {
+            Executing::dispatch($this->task);
             $exit = Artisan::call($this->task->command, $this->task->compileParameters(), new DatabaseOutput($this->result, $start));
         } catch (\Exception $e) {
             $this->result->result .= $e->getMessage();
@@ -58,5 +61,7 @@ class ExecuteTaskJob implements ShouldQueue
         $this->result->status = ($exit ?? 1) == 0 ? ResultStatus::SUCCESS : ResultStatus::FAILED;
         $this->result->duration = (microtime(true) - $start) * 1000;
         $this->result->save();
+
+        Executed::dispatch($this->task, $this->result->duration, $this->result->result);
     }
 }
