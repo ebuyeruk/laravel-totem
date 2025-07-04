@@ -2,11 +2,13 @@
 
 namespace Ebuyer\Totem\Repositories;
 
+use Ebuyer\Totem\ResultStatus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Artisan;
+use Ebuyer\Totem\Jobs\ExecuteTaskJob;
+use Ebuyer\Totem\Http\Resources\ResultResource;
 use Illuminate\Support\Facades\Cache;
 use Ebuyer\Totem\Contracts\TaskInterface;
 use Ebuyer\Totem\Events\Activated;
@@ -189,15 +191,15 @@ class EloquentTaskRepository implements TaskInterface
     public function execute(Task|int $id): Task
     {
         $task = $this->find($id);
-        $start = microtime(true);
-        try {
-            Artisan::call($task->command, $task->compileParameters());
-            $output = Artisan::output();
-        } catch (\Exception $e) {
-            $output = $e->getMessage();
-        }
 
-        Executed::dispatch($task, $start, $output);
+        $result = $task->results()->create([
+            'ran_at' => now(),
+            'duration' => 0,
+            'result' => '',
+            'status' => ResultStatus::QUEUED,
+        ]);
+
+        ExecuteTaskJob::dispatch($task, $result);
 
         return $task;
     }

@@ -23,7 +23,8 @@ class ResultResource extends JsonResource
             ),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'duration' => $this->duration
+            'duration' => $this->duration,
+            'status' => $this->status,
         ];
     }
 

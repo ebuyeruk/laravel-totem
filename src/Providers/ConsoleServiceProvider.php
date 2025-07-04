@@ -2,6 +2,8 @@
 
 namespace Ebuyer\Totem\Providers;
 
+use Ebuyer\Totem\Jobs\ExecuteTaskJob;
+use Ebuyer\Totem\ResultStatus;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\ServiceProvider;
 use Ebuyer\Totem\Events\Executed;
@@ -34,18 +36,19 @@ class ConsoleServiceProvider extends ServiceProvider
         $tasks = app('totem.tasks')->findAllActive();
 
         $tasks->each(function ($task) use ($schedule) {
-            $event = $schedule->command($task->command, $task->compileParameters(true));
+            $event = $schedule->call(function () use ($task) {
+                $result = $task->results()->create([
+                    'ran_at' => now(),
+                    'duration' => 0,
+                    'result' => ResultStatus::QUEUED,
+                ]);
+                ExecuteTaskJob::dispatch($task, $result);
+            });
 
             $event->cron($task->getCronExpression())
                 ->name($task->description)
                 ->timezone($task->timezone)
-                ->before(function () use ($task, $event) {
-                    $event->start = microtime(true);
-                    Executing::dispatch($task);
-                })
-                ->thenWithOutput(function ($output) use ($event, $task) {
-                    Executed::dispatch($task, $event->start ?? microtime(true), $output);
-                });
+                ;
             if ($task->dont_overlap) {
                 $event->withoutOverlapping();
             }

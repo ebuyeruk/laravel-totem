@@ -17,10 +17,13 @@ class Result extends TotemModel
     protected $fillable = [
         'duration',
         'result',
+        'ran_at',
+        'status',
     ];
 
     protected $casts = [
         'ran_at' => 'datetime',
+        'status' => ResultStatus::class,
     ];
 
     public function task(): BelongsTo

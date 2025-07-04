@@ -29,7 +29,7 @@ class ResultsController
 
         abort_if(!$task, 404);
 
-        return ResultResource::collection($task->results()->paginate($request->input('per_page', 15)));
+        return ResultResource::collection($task->results()->latest()->paginate($request->input('per_page', 15)));
     }
 
     /**
