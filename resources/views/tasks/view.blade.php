@@ -12,73 +12,77 @@
 @section('main-panel-content')
     <ul class="uk-list uk-list-striped">
         <li>
-            <span class="uk-text-muted uk-float-right">Description</span>
-            <span class="uk-float-left">{{Str::limit($task->description, 80)}}</span>
+            <span class="uk-text-muted">Name</span>
+            <span class="">{{Str::limit($task->name, 80)}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Command</span>
-            <span class="uk-float-left">{{$task->command}}</span>
+            <span class="uk-text-muted">Description</span>
+            <span class="">{!! Str::markdown($task->description) !!}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Parameters</span>
-            <span class="uk-float-left">{{$task->parameters ?? "N/A"}}</span>
+            <span class="uk-text-muted ">Command</span>
+            <span class="">{{$task->command}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Cron Expression</span>
-            <span class="uk-float-left">
+            <span class="uk-text-muted ">Parameters</span>
+            <span class="">{{$task->parameters ?? "N/A"}}</span>
+        </li>
+        <li>
+            <span class="uk-text-muted ">Cron Expression</span>
+            <span class="">
                 <span>{{$task->getCronExpression()}}</span>
             </span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Timezone</span>
-            <span class="uk-float-left">{{$task->timezone}}</span>
+            <span class="uk-text-muted ">Timezone</span>
+            <span class="">{{$task->timezone}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Created At</span>
-            <span class="uk-float-left">{{$task->created_at->toDateTimeString()}}</span>
+            <span class="uk-text-muted ">Created At</span>
+            <span class="">{{$task->created_at->toDateTimeString()}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Updated At</span>
-            <span class="uk-float-left">{{$task->updated_at->toDateTimeString()}}</span>
+            <span class="uk-text-muted ">Updated At</span>
+            <span class="">{{$task->updated_at->toDateTimeString()}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Email Notification</span>
-            <span class="uk-float-left">{{$task->notification_email_address ?? 'N/A'}}</span>
+            <span class="uk-text-muted ">Email Notification</span>
+            <span class="">{{$task->notification_email_address ?? 'N/A'}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">SMS Notification</span>
-            <span class="uk-float-left">{{$task->notification_phone_number ?? 'N/A'}}</span>
+            <span class="uk-text-muted ">SMS Notification</span>
+            <span class="">{{$task->notification_phone_number ?? 'N/A'}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Slack Notification</span>
-            <span class="uk-float-left">{{$task->notification_slack_webhook ?? 'N/A'}}</span>
+            <span class="uk-text-muted ">Slack Notification</span>
+            <span class="">{{$task->notification_slack_webhook ?? 'N/A'}}</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Average Run Time</span>
-            <span class="uk-float-left">{{$task->results()->count() > 0 ? number_format(  $task->results()->sum('duration') / (1000 * $task->results()->count()) , 2) : '0'}} seconds</span>
+            <span class="uk-text-muted ">Average Run Time</span>
+            <span class="">{{$task->results()->count() > 0 ? number_format(  $task->results()->sum('duration') / (1000 * $task->results()->count()) , 2) : '0'}} seconds</span>
         </li>
         <li>
-            <span class="uk-text-muted uk-float-right">Next Run Schedule</span>
-            <span class="uk-float-left">{{$task->upcoming }}</span>
+            <span class="uk-text-muted ">Next Run Schedule</span>
+            <span class="">{{$task->upcoming }}</span>
         </li>
         @if($task->dont_overlap)
             <li>
-                <span class="uk-float-left">Doesn't Overlap with another instance of this task</span>
+                <span class="">Doesn't Overlap with another instance of this task</span>
             </li>
         @endif
         @if($task->run_in_maintenance)
             <li>
-                <span class="uk-float-left">Runs in maintenance mode</span>
+                <span class="">Runs in maintenance mode</span>
             </li>
         @endif
         @if($task->run_on_one_server)
             <li>
-                <span class="uk-float-left">Runs on a single server</span>
+                <span class="">Runs on a single server</span>
             </li>
         @endif
         @if($task->run_in_background)
             <li>
-                <span class="uk-float-left">Runs in the background</span>
+                <span class="">Runs in the background</span>
             </li>
         @endif
     </ul>

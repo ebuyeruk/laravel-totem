@@ -1,21 +1,31 @@
 {
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "prod": "npm run production",
+    "dev": "npm run development",
+    "development": "npx laravel-mix",
+    "watch": "npx laravel-mix watch",
+    "watch-poll": "npx laravel-mix watch -- --watch-options-poll=1000",
+    "hot": "npx laravel-mix watch --hot",
+    "production": "npx laravel-mix --production"
   },
   "devDependencies": {
     "axios": "^0.21.0",
     "es6-promise": "^4.0.5",
     "gulp": "^3.9.1",
-    "laravel-elixir": "^6.0.0-14",
-    "laravel-elixir-vue-2": "^0.3.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
+    "laravel-mix": "^6.0.49",
+    "less": "^3.13.1",
+    "less-loader": "^7.3.0",
     "lodash": "^4.16.2",
     "moment": "^2.10.6",
     "phpunserialize": "1.*",
-    "uikit": "^3.0.0-rc.11",
+    "uikit": "^3.23.11",
     "vue": "^2.2.0",
+    "vue-loader": "^15.11.1",
+    "vue-template-compiler": "^2.7.16",
     "xml-loader": "1.1.0"
+  },
+  "resolutions": {
+    "less": "^3.13.1"
   }
 }

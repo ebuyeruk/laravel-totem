@@ -26,7 +26,7 @@
     <table class="uk-table uk-table-responsive" cellpadding="0" cellspacing="0" class="mb1">
         <thead>
             <tr>
-                <th>{!! \Ebuyer\Totem\Helpers\columnSort('Description', 'description') !!}</th>
+                <th>{!! \Ebuyer\Totem\Helpers\columnSort('Name', 'name') !!}</th>
                 <th>{!! \Ebuyer\Totem\Helpers\columnSort('Average Runtime', 'average_runtime') !!}</th>
                 <th>{!! \Ebuyer\Totem\Helpers\columnSort('Last Run', 'last_ran_at') !!}</th>
                 <th>Next Run</th>

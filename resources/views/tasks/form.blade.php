@@ -15,11 +15,23 @@
 @section('main-panel-content')
     <div class="uk-grid">
         <div class="uk-width-1-1@s uk-width-1-3@m">
-            <label class="uk-form-label">Description</label>
+            <label class="uk-form-label">Name</label>
             <div class="uk-text-meta">Provide a descriptive name for your task</div>
         </div>
         <div class="uk-width-1-1@s uk-width-2-3@m">
-            <input class="uk-input" placeholder="e.g. Daily Backups" name="description" id="description" value="{{old('description', $task->description)}}" type="text">
+            <input class="uk-input" placeholder="e.g. Daily Backups" name="name" id="name" value="{{old('name', $task->name)}}" type="text">
+            @if($errors->has('name'))
+                <p class="uk-text-danger">{{$errors->first('name')}}</p>
+            @endif
+        </div>
+    </div>
+    <div class="uk-grid">
+        <div class="uk-width-1-1@s uk-width-1-3@m">
+            <label class="uk-form-label">Description</label>
+            <div class="uk-text-meta">Provide a description for your task</div>
+        </div>
+        <div class="uk-width-1-1@s uk-width-2-3@m">
+            <textarea class="uk-textarea" placeholder="This is a task to create daily backups" name="description" id="description" rows="5">{{old('description', $task->description)}}</textarea>
             @if($errors->has('description'))
                 <p class="uk-text-danger">{{$errors->first('description')}}</p>
             @endif
